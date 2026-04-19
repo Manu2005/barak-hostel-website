@@ -333,15 +333,10 @@ npm install
 ## 👥 Credits
 
 **Development Team:**
-- Ritwij
-- Naman
-- Yuvraj
-- Nikhil
-- Rajat
-- Raunak
-- Mayank
-- Ishan
-- Pushpak
+- Manu
+- Rajib
+- Pratik
+- Soukarya
 - Kanan
 
 ## 📄 License
@@ -356,10 +351,4 @@ This project is developed for hostel management purposes.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📞 Contact
 
-For any queries or support, please contact the HMC team.
-
----
-
-**Made with ❤️ by the Hostel Development Team**
