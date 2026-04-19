@@ -1,0 +1,367 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.homepage {
+  min-height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 80% 10%, #fff, #222 100%);
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding-bottom: 230px; /* space for footer gap */
+}
+
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 40px 0 40px;
+}
+
+.homepage-logo {
+  cursor: pointer;
+}
+
+.homepage-logo img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.2s;
+}
+
+.homepage img:hover {
+  transform: scale(1.1);
+}
+.homepage-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.homepage-nav button {
+  background: transparent;
+  color: #ff2e53;
+  border: 2px solid #ff2e53;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.homepage-nav button:hover {
+  background: #ff2e53;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.homepage-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0px;
+  padding: 0 40px;
+}
+
+.homepage-hero-left {
+  flex: 1;
+  margin-top: 40px;
+}
+
+.homepage-hero-left h1 {
+  color: #ff2e53;
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.homepage-hero-left p {
+  color: #d3d3d3;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.homepage-hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trophy-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trophy-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background: url("../assets/baraklogo.png") no-repeat center center;
+  background-size: contain;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.trophy-img {
+  width: 220px;
+  height: auto;
+  z-index: 1;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s, opacity 0.2s;
+}
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.arrow:hover:not(:disabled) {
+  color: #ff2e53;
+  opacity: 1;
+}
+
+.trophy-caption {
+  color: #6b3a13;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: -150px;
+  text-align: center;
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+.fade-transition {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.fade-transition.fade-out {
+  opacity: 0;
+}
+
+/* User Profile Styles */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 46, 83, 0.1);
+  border: 1px solid #ff2e53;
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-profile:hover {
+  background: rgba(255, 46, 83, 0.2);
+  transform: translateY(-2px);
+}
+
+.profile-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff2e53;
+}
+
+.profile-name {
+  color: #ff2e53;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* HMC Section Styles */
+.hmc-section {
+  padding: 60px 40px;
+  background: transparent;
+}
+
+.hmc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hmc-title {
+  color: #ff2e53;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* General Secretary - Featured Card */
+.hmc-general-secretary {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.hmc-card.featured {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(30, 30, 30, 0.98);
+  border: 2px solid #ff2e53;
+  box-shadow: 0 12px 48px rgba(255, 46, 83, 0.3);
+}
+
+.hmc-card.featured .hmc-photo img {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #ff2e53;
+}
+
+.hmc-card.featured .hmc-badge {
+  font-size: 0.85rem;
+  padding: 8px 20px;
+}
+
+.hmc-card.featured .hmc-name {
+  font-size: 1.5rem;
+}
+
+/* Other Secretaries Grid */
+.hmc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.hmc-card {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 46, 83, 0.1);
+}
+
+.hmc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 46, 83, 0.3);
+}
+
+/* HMC Photo */
+.hmc-photo {
+  position: relative;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.hmc-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff2e53;
+}
+
+.hmc-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff2e53;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 46, 83, 0.4);
+}
+
+/* HMC Info */
+.hmc-info {
+  text-align: center;
+}
+
+.hmc-name {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.hmc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hmc-detail-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hmc-label {
+  color: #ff2e53;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.hmc-value {
+  color: #ddd;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+/* Responsive Design for HMC Section */
+@media (max-width: 768px) {
+  .hmc-section {
+    padding: 40px 20px;
+  }
+
+  .hmc-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .hmc-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .hmc-card {
+    padding: 25px 15px;
+  }
+
+  .hmc-position {
+    font-size: 1rem;
+  }
+
+  .hmc-name {
+    font-size: 1.1rem;
+  }
+
+  .hmc-contact {
+    font-size: 0.9rem;
+  }
+}

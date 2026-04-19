@@ -1,0 +1,190 @@
+.grid-container {
+  width: 100%;
+  background: rgba(30, 30, 30, 0.96);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.grid-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #181818;
+}
+
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.grid-table thead tr {
+  background: #ff2e53;
+  color: #fff;
+}
+
+.sortable-header {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  position: relative;
+  user-select: none;
+}
+
+.header-content {
+  position: relative;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-title {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.header-title:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sort-indicator {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.filter-arrow {
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.7;
+  padding: 4px;
+  border-radius: 3px;
+  transition: all 0.2s;
+  transform: rotate(0deg);
+}
+
+.filter-arrow:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filter-arrow.active {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(180deg);
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.filter-search {
+  width: 100%;
+  background: #1a1a1a;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filter-search:focus {
+  background: #111;
+  border-bottom-color: #ff2e53;
+}
+
+.filter-search::placeholder {
+  color: #888;
+}
+
+.filter-options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.filter-option {
+  padding: 10px 12px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #333;
+}
+
+.filter-option:hover {
+  background-color: #333;
+}
+
+.filter-option:last-child {
+  border-bottom: none;
+}
+
+.grid-table tbody tr {
+  background: #232323;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s;
+}
+
+.grid-table tbody tr:hover {
+  background: #2a2a2a;
+}
+
+.grid-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.grid-table td {
+  padding: 12px;
+  color: #fff;
+  border-right: 1px solid #333;
+  vertical-align: middle;
+}
+
+.grid-table td:last-child {
+  border-right: none;
+}
+
+.grid-footer {
+  margin-top: 16px;
+  color: #aaa;
+  font-size: 14px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.filter-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filter-options::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.filter-options::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.filter-options::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

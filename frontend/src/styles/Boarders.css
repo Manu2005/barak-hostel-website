@@ -1,0 +1,254 @@
+.boarders-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 80% 10%, #fff, #222 100%);
+  position: relative;
+  padding: 20px;
+}
+
+/* Logo */
+.boarders-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.boarders-logo img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.2s;
+}
+
+.boarders-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Main container */
+.boarders-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* Header */
+.boarders-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.boarders-header h1 {
+  font-size: 3rem;
+  color: #ff2e53;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.boarders-header p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Filters */
+.boarders-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  color: #ff2e53;
+  font-weight: bold;
+}
+
+.filter-select {
+  background: #232323;
+  border: 1px solid #ff2e53;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-select:focus {
+  border-color: #fff;
+  background: #181818;
+}
+
+.results-count {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+/* Students Grid */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Student Card */
+.student-card {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 46, 83, 0.1);
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  border-color: rgba(255, 46, 83, 0.3);
+}
+
+/* Student Photo */
+.student-photo {
+  position: relative;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.student-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff2e53;
+}
+
+.status-badge {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(60px);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status-badge.current {
+  background: #4caf50;
+}
+
+.status-badge.alumni {
+  background: #2196f3;
+}
+
+/* Student Info */
+.student-info {
+  text-align: center;
+}
+
+.student-name {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.student-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #ff2e53;
+  font-weight: bold;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Student Links */
+.student-links {
+  text-align: center;
+}
+
+.linkedin-link {
+  display: inline-block;
+  background: #0077b5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.linkedin-link:hover {
+  background: #005885;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #aaa;
+}
+
+.no-results p {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .boarders-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .results-count {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .boarders-header h1 {
+    font-size: 2rem;
+  }
+}
